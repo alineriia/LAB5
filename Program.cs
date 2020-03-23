@@ -19,47 +19,39 @@ namespace Lab5_1
         {
             int n = 3;
             Rectangle[] r = new Rectangle[n];
-            for (int i = 0; i < n; i++)
-            {
-                r[i] = new Rectangle();
-            }
-            r[0].Input("rect1.txt");
-            r[1].Input("rect2.txt");
-            r[2].Input("rect3.txt");
-            for (int i = 0; i < n; i++)
-            {
-                r[i].Output();
-            }
-            
             Circle[] c = new Circle[n];
-            for (int i = 0; i < n; i++)
-            {
-                c[i] = new Circle();
-                
-            }
-            c[0].Input("circ1.txt");
-            c[1].Input("circ2.txt");
-            c[2].Input("circ3.txt");
-            for (int i = 0; i < n; i++)
-            {
-                c[i].Output();
-            }
-            
-
             Triangle[] t = new Triangle[n];
             for (int i = 0; i < n; i++)
             {
+                r[i] = new Rectangle();
+                c[i] = new Circle();
                 t[i] = new Triangle();
-                
             }
+            r[0].Input("rect1.txt");
+            r[1].Input("rect1.txt");
+            r[2].Input("rect3.txt");
+            c[0].Input("circ1.txt");
+            c[1].Input("circ2.txt");
+            c[2].Input("circ3.txt");
             t[0].Input("tria1.txt");
             t[1].Input("tria2.txt");
             t[2].Input("tria3.txt");
+
+            for (int i = 0; i < n; i++)
+            {
+                r[i].Output();
+               
+            }
             for (int i = 0; i < n; i++)
             {
                 t[i].Output();
             }
-            
+
+            for (int i = 0; i < n; i++)
+            {
+                c[i].Output();
+            }
+           
             Console.ReadKey();
         }
     }
